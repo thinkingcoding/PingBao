@@ -42,7 +42,7 @@ class Good_History extends Framework\Model
      * 
      * @validate required, max(1023)
      */
-    protected $_describe;
+    protected $_specification;
 
     /**
      * @column

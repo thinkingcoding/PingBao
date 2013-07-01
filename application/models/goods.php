@@ -1,6 +1,6 @@
 <?php
 
-class goods extends Framework\Model
+class Goods extends Framework\Model
 {
     /**
      * @column
@@ -48,7 +48,7 @@ class goods extends Framework\Model
      * 
      * @validate required, min(12), max(1023)
      */
-    protected $_describe;
+    protected $_specification;
     
     /**
      * @column
