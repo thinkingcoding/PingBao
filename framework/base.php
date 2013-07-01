@@ -33,7 +33,7 @@ namespace Framework
                 throw new Exception("Call parent::__construct!");
             }
             
-            $getMatches = StringMethods::match($name, "^get([a-zA-Z0-9]+)$");
+            $getMatches = StringMethods::match($name, "^get([a-zA-Z0-9_]+)$");
             if (sizeof($getMatches) > 0)
             {
                 $normalized = lcfirst($getMatches[0]);
@@ -57,7 +57,7 @@ namespace Framework
                 }
             }
             
-            $setMatches = StringMethods::match($name, "^set([a-zA-Z0-9]+)$");
+            $setMatches = StringMethods::match($name, "^set([a-zA-Z0-9_]+)$");
             if (sizeof($setMatches) > 0)
             {
                 $normalized = lcfirst($setMatches[0]);
