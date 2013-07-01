@@ -193,7 +193,7 @@ namespace Framework
         {
             if (empty($this->_table))
             {
-                $this->_table = strtolower(StringMethods::singular(get_class($this)));
+                $this->_table = strtolower(get_class($this));
             }
             
             return $this->_table;
