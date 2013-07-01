@@ -53,8 +53,8 @@ try
     
     // cache
     
-    $cache = new Framework\Cache();
-    Framework\Registry::set("cache", $cache->initialize());
+    // $cache = new Framework\Cache();
+    // Framework\Registry::set("cache", $cache->initialize());
     
     // session
     
@@ -81,7 +81,7 @@ try
     
     unset($configuration);
     unset($database);
-    unset($cache);
+    // unset($cache);
     unset($session);
     unset($router);
 }
