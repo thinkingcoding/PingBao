@@ -155,7 +155,7 @@ namespace Framework
         {
             $url= $this->url;
             $parameters = array();
-            $controller = "index";
+            $controller = "home";
             $action = "index";
         
             Events::fire("framework.router.dispatch.before", array($url));
