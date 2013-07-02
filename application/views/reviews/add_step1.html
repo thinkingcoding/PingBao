@@ -1,0 +1,19 @@
+<div class="row">
+<h3>请输入商品名</h3>
+<form class="form-horizontal" method="get">
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">商品名</label>
+        <div class="controls">
+            <input type="text" id="inputEmail" name="goods_name" placeholder="商品名">
+            {if isset($error)}
+            <span class="alert alert-error">{echo $error; }</span>
+            {/if}
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn" name="BtnClicked" value="true">下一步</button>
+        </div>
+    </div>
+</form>
+</div>

@@ -4,6 +4,11 @@
 
 $routes = array(
     array(
+        "pattern" => "index",
+        "controller" => "home",
+        "action" => "index"
+    ),
+    array(
         "pattern" => "register",
         "controller" => "users",
         "action" => "register"
@@ -19,64 +24,19 @@ $routes = array(
         "action" => "logout"
     ),
     array(
-        "pattern" => "search",
-        "controller" => "users",
-        "action" => "search"
+        "pattern" => "reviews/add/step1",
+        "controller" => "reviews",
+        "action" => "add_step1"
     ),
     array(
-        "pattern" => "profile",
-        "controller" => "users",
-        "action" => "profile"
+        "pattern" => "reviews/add/step2",
+        "controller" => "reviews",
+        "action" => "add_step2"
     ),
     array(
-        "pattern" => "settings",
-        "controller" => "users",
-        "action" => "settings"
-    ),
-    array(
-        "pattern" => "unfriend/:id",
-        "controller" => "users",
-        "action" => "friend"
-    ),
-    array(
-        "pattern" => "friend/:id",
-        "controller" => "users",
-        "action" => "friend"
-    ),
-    array(
-        "pattern" => "fonts/:id",
-        "controller" => "files",
-        "action" => "fonts"
-    ),
-    array(
-        "pattern" => "thumbnails/:id",
-        "controller" => "files",
-        "action" => "thumbnails"
-    ),
-    array(
-        "pattern" => "users/edit/:id",
-        "controller" => "users",
-        "action" => "edit"
-    ),
-    array(
-        "pattern" => "users/delete/:id",
-        "controller" => "users",
-        "action" => "delete"
-    ),
-    array(
-        "pattern" => "users/undelete/:id",
-        "controller" => "users",
-        "action" => "undelete"
-    ),
-    array(
-        "pattern" => "files/delete/:id",
-        "controller" => "files",
-        "action" => "delete"
-    ),
-    array(
-        "pattern" => "files/undelete/:id",
-        "controller" => "files",
-        "action" => "undelete"
+            "pattern" => "reviews/add/step3",
+            "controller" => "reviews",
+            "action" => "add_step3"
     )
 );
 

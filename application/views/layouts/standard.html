@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>ProPHPMVC</title>
-        <link type="text/css" href="/fonts/LuxiSans.css" rel="stylesheet" />
-        <style type="text/css">
-            h1
-            {
-                font-family: "LuxiSans";
-            }
-        </style>
-    </head>
-    <body>
-        {include navigation.html}
+<html>
+<head>
+    <title>评宝网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/common.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+        {include header.html}
         {yield action}
-    </body>
+        {include footer.html}
+</div>
+</body>
 </html>

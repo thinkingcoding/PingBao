@@ -1,47 +1,46 @@
-<h1>Register</h1>
-{if isset($success)}
-    Your account has been created!
-{/if}
-{else}
-    <form method="post" enctype="multipart/form-data">
-        <ol>
-            <li>
-                <label>
-                    First name:
-                    <input type="text" name="first" />
-                    {echo Shared\Markup::errors($errors, "first")}
-                </label>
-            </li>
-            <li>
-                <label>
-                    Last name:
-                    <input type="text" name="last" />
-                    {echo Shared\Markup::errors($errors, "last")}
-                </label>
-            </li>    
-            <li>
-                <label>
-                    Email:
-                    <input type="text" name="email" />
-                    {echo Shared\Markup::errors($errors, "email")}
-                </label>
-            </li>
-            <li>
-                <label>
-                    Password:
-                    <input type="password" name="password" />
-                    {echo Shared\Markup::errors($errors, "password")}
-                </label>
-            </li>
-            <li>
-                <label>
-                    Photo:
-                    <input type="file" name="photo" />
-                </label>
-            </li>
-            <li>
-                <input type="submit" name="register" value="register" />
-            </li>
-        </ol>
-    </form>
-{/else}
+<div class="row">
+<h3>用户注册</h3>
+<form class="form-horizontal" method="post">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">用户邮箱</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" name="email" placeholder="用户邮箱">
+      {if isset($errors["email"])}
+      <span class="alert alert-error">{echo $errors["email"][0]}</span>
+      {/if}
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputUserName">用户名</label>
+    <div class="controls">
+      <input type="text" id="inputUserName" name="name" placeholder="用户名">
+      {if isset($errors["name"])}
+      <span class="alert alert-error">{echo $errors["name"][0]}</span>
+      {/if}
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">用户密码</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" name="password" placeholder="用户密码">
+      {if isset($errors["password"])}
+      <span class="alert alert-error">{echo $errors["password"][0]}</span>
+      {/if}
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPasswordAgain">重复用户密码</label>
+    <div class="controls">
+      <input type="password" id="inputPasswordAgain" name="password_again" placeholder="重复用户密码">
+      {if isset($errors["password_again"])}
+      <span class="alert alert-error">{echo $errors["password_again"][0]}</span>
+      {/if}
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn" name="register" value="register">注册！</button>
+    </div>
+  </div>
+</form>
+</div>
