@@ -41,7 +41,7 @@ namespace Shared
             header("Location: {$url}");
             exit();
         }
-        
+
         public function setUser($user)
         {
             $session = Registry::get("session");
@@ -58,7 +58,6 @@ namespace Shared
             $this->_user = $user;
             return $this;
         }
-
 
         public function __construct($options = array())
         {
@@ -115,7 +114,7 @@ namespace Shared
                         ->set("user", $this->getUser());
                 }
             }
-                
+
             parent::render();
         }
     }
