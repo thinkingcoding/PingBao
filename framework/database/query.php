@@ -240,7 +240,7 @@ namespace Framework\Database
             
             if ($result === false)
             {
-                throw new Exception\Sql();
+                throw new Exception\Sql($sql);
             }
             
             if ($isInsert)
