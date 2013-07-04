@@ -1,6 +1,6 @@
-<h1>Register</h1>
+<h1>Settings</h1>
 {if isset($success)}
-    Your account has been created!
+    Your account has been updated!
 {/if}
 {else}
     <form method="post" enctype="multipart/form-data">
@@ -8,29 +8,25 @@
             <li>
                 <label>
                     First name:
-                    <input type="text" name="first" />
-                    {echo Shared\Markup::errors($errors, "first")}
+                    <input type="text" name="first" value="{echo $user->first}" />
                 </label>
             </li>
             <li>
                 <label>
                     Last name:
-                    <input type="text" name="last" />
-                    {echo Shared\Markup::errors($errors, "last")}
+                    <input type="text" name="last" value="{echo $user->last}" />
                 </label>
             </li>    
             <li>
                 <label>
                     Email:
-                    <input type="text" name="email" />
-                    {echo Shared\Markup::errors($errors, "email")}
+                    <input type="text" name="email" value="{echo $user->email}" />
                 </label>
             </li>
             <li>
                 <label>
                     Password:
-                    <input type="password" name="password" />
-                    {echo Shared\Markup::errors($errors, "password")}
+                    <input type="password" name="password" value="{echo $user->password}" />
                 </label>
             </li>
             <li>
@@ -40,7 +36,7 @@
                 </label>
             </li>
             <li>
-                <input type="submit" name="register" value="register" />
+                <input type="submit" name="update" value="update" />
             </li>
         </ol>
     </form>

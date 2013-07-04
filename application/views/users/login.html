@@ -1,31 +1,26 @@
-<div class="row">
-<h3>登陆</h3>
-<form class="form-horizontal" method="post">
-    <div class="control-group">
-        <label class="control-label" for="inputEmail">用户名</label>
-        <div class="controls">
-            <input type="text" id="inputEmail" name="email" placeholder="用户名">
-            {if isset($email_error)}
-            <span class="alert alert-error">{echo $email_error; }</span>
-            {/if}
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label" for="inputPassword">用户密码</label>
-        <div class="controls">
-            <input type="password" id="inputPassword" name="password" placeholder="用户密码">
-            {if isset($password_error)}
-            <span class="alert alert-error">{echo $password_error; }</span>
-            {/if}
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <label class="checkbox">
-                <input type="checkbox">记住我
+<h1>Login</h1>
+<form method="post">
+    <ol> 
+        <li>
+            <label>
+                Email:
+                <input type="text" name="email" />
+                {if isset($email_error)}
+                    {echo $email_error}
+                {/if}
             </label>
-            <button type="submit" class="btn" name="login" value="login">登陆</button>
-        </div>
-    </div>
+        </li>
+        <li>
+            <label>
+                Password:
+                <input type="password" name="password" />
+                {if isset($password_error)}
+                    {echo $password_error}
+                {/if}
+            </label>
+        </li>
+        <li>
+            <input type="submit" name="login" value="login" />
+        </li>
+    </ol>
 </form>
-</div>
